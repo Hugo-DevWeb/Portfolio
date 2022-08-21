@@ -52,7 +52,7 @@ a {
   font-size: 35px;
   color: #ff6d00;
 }
-.header__nav .back-link {
+.header__nav .back__link {
   color: #fff;
   font-size: 35px;
   font-weight: 900;
@@ -132,9 +132,7 @@ a {
 }
 .visible .certification__container {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  align-items: baseline;
   width: 100%;
   transform: translateY(-70%) translateX(200%);
 }
@@ -253,6 +251,58 @@ img {
   }
   100% {
     transform: translateX(0) scale(1);
+  }
+}
+@media screen and (max-width: 950px) {
+  .header {
+    display: block;
+  }
+  .header__title {
+    width: 100%;
+    font-size: 40px;
+  }
+  .header__title::after {
+    position: inherit;
+  }
+  .header__nav {
+    margin-top: 35px;
+    width: 250px;
+  }
+  .page {
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 15px;
+  }
+  .page__link {
+    margin: auto;
+  }
+  body {
+    background-image: url(../../public/image/backgroundmobile2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .social__link {
+    display: none;
+  }
+  .certification__container {
+    flex-direction: column;
+    padding-bottom: 124px;
+  }
+  .document {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    height: 260px;
+  }
+  .book {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .book__card {
+    flex-basis: 90%;
   }
 }
 

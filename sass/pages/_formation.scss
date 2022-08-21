@@ -25,7 +25,8 @@
     flex-wrap: nowrap;
     overflow: hidden;
     & .certification__container{
-       @include flexbox (row, space-evenly);
+       display: flex;
+       justify-content: space-evenly;
        width: 100%;
        transform: translateY(-70%)translateX(200%);
        & span{
