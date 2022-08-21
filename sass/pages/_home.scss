@@ -1,0 +1,54 @@
+.title{
+    @include flexbox (row, center, baseline);
+    color: $text-color; 
+    @include font (italic, 35px, 900);
+    border-bottom: 3px solid $color-primary;
+    margin: 60px 0px;
+    & h2{
+        border-bottom: 6px solid $color-primary;
+        animation: entry 2s ease-in-out forwards;
+    }
+}
+.page{
+    @include flexbox (row, space-between, baseline);
+    margin: 100px 70px;
+    & img{
+        height: 180px;
+    }
+    &__link{
+        @include flexbox(column, flex-start, center);
+        &:hover{
+            animation: pulse 2s infinite; 
+        }
+    }
+    & span{
+        @include font (normal, 20px, 700);
+        color: $text-color;
+    }
+}
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes entry{
+    0%{
+        transform: translateX(-700px) scale(0.7);
+    }
+    50%{
+        transform: translateX(700px) scale(0.7);
+    }
+    75%{
+        transform: translateX(-350px) scale((0.7));
+    }
+    100%{
+        transform: translateX(0) scale(1);
+    }
+
+}

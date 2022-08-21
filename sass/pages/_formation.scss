@@ -1,0 +1,80 @@
+.formation{
+    display: flex;
+    flex-wrap: wrap;
+    height: 430px;
+    &__group{
+        color: $text-color;
+        font-size: 24px;
+        text-align: center;
+        @include flexbox;
+        padding-bottom: 15px;
+        width: 100%;
+        &--link{
+            width: 50%;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ff6d00;
+            &:hover{
+                border-color: $color-secondary;
+            }
+        }
+    }
+}
+.visible{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    & .certification__container{
+       @include flexbox (row, space-evenly);
+       width: 100%;
+       transform: translateY(-70%)translateX(200%);
+       & span{
+        color: $text-color;
+        font-size: 20px;
+       }
+
+
+    }
+    & .formation__container{
+        margin: 70px 0px;
+        font-size: $xl-font;
+        color: white;
+        text-align: center;
+        line-height: 36px;
+        padding: 20px;
+    }
+
+}
+.certification--link:active #certifications{
+    animation: apparition 1s forwards;
+    
+}
+.certification--link:active #formations{
+    animation: disparition 1s forwards;
+}
+.formation--link:active #certifications{
+    animation: disparition 1s forwards;
+    
+}
+.formation--link:active #formations{
+    animation: apparition 1s forwards;
+}
+
+.document{
+    width: 424px;
+}
+img{
+    height: 300px;
+}
+
+@keyframes apparition{
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes disparition{
+    to{
+        transform: translateX(-100%);
+    }
+}
+

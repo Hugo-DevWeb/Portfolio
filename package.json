@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/_main.scss:./public/css/style.css",
+    "autoprefixer": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/autoprefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hugo-DevWeb/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
