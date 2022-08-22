@@ -282,7 +282,7 @@ img {
   .page {
     flex-wrap: wrap;
     gap: 40px;
-    margin-top: 15px;
+    margin: auto;
   }
   .page__link {
     margin: auto;
