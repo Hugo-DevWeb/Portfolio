@@ -126,15 +126,16 @@ a {
 
 .visible {
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
   overflow: hidden;
+  transform: translateX(0);
 }
 .visible .certification__container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  transform: translateY(-70%) translateX(200%);
+  position: fixed;
+  left: 100%;
 }
 .visible .certification__container span {
   color: #fff;
@@ -149,22 +150,26 @@ a {
   padding: 20px;
 }
 
-.certification--link:active #certifications {
-  animation: apparition 1s forwards;
+.certification--link:active .visible {
+  animation: certification 1s forwards;
 }
 
-.certification--link:active #formations {
-  animation: disparition 1s forwards;
+.formation--link:active .visible {
+  animation: formation 1s forwards;
 }
 
-.formation--link:active #certifications {
-  animation: disparition 1s forwards;
+.mobile_img {
+  display: none;
 }
 
-.formation--link:active #formations {
-  animation: apparition 1s forwards;
+@media screen and (max-width: 700px) {
+  .mobile_img {
+    display: initial;
+  }
+  .desktop_img {
+    display: none;
+  }
 }
-
 .document {
   width: 424px;
 }
@@ -173,14 +178,20 @@ img {
   height: 300px;
 }
 
-@keyframes apparition {
-  to {
+@keyframes certification {
+  0% {
     transform: translateX(0);
   }
-}
-@keyframes disparition {
-  to {
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes formation {
+  to {
+    transform: translateX(0);
   }
 }
 .title {
@@ -284,6 +295,9 @@ img {
   }
   .social__link {
     display: none;
+  }
+  .visible {
+    height: 1000px;
   }
   .certification__container {
     flex-direction: column;
