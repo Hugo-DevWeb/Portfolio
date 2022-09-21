@@ -1,10 +1,12 @@
 .book{
     @include flexbox (row, space-evenly);
     width: 100%;
+    flex-wrap: wrap;
     &__card{
         color: $text-color;
         width: 35%;
         font-size: $xl-font;
+        padding: 25px;
         @include flexbox(column);
         & h3{
             color: $color-primary;
